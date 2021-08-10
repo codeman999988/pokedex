@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import DisplayPage from './Pages/DisplayPage.jsx';
+import { BrowserRouter as Router, Switch, Link } from 'react-router-dom';
 
 class App extends Component {
 
@@ -15,6 +17,7 @@ class App extends Component {
   render() {
   return (
     <div className="App">
+      <DisplayPage />
     </div>
   );
 }}

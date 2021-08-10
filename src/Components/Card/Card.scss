@@ -1,0 +1,31 @@
+.card {
+
+    border: 1px solid darkgrey;
+    margin: 2rem;
+    border-radius: 4%;
+
+
+
+    &__title{
+        background-color: red;
+    }
+    &__image{
+
+    }
+    &__stats {
+
+    }
+
+    &:hover {
+        background-color: grey;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
