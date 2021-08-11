@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Card from "../Components/Card/Card";
 import axios from 'axios';
-import './DisplayPage.scss'
+import './DisplayPage.scss';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import PokeCard from "../Components/PokeCard/PokeCard";
 
 
 export default class DisplayPage extends Component {
@@ -21,10 +23,12 @@ export default class DisplayPage extends Component {
                 <Card 
                     name={pokemon}
                     id={index+1}
-                />)
-        })
+                />
+        )});
+
         return (
-            <div className="DPCard__container">
+
+            <div>
                 {Pokemons}
             </div>
         )
