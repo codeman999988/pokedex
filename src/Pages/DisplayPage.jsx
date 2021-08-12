@@ -27,10 +27,13 @@ export default class DisplayPage extends Component {
         )});
 
         return (
-
-            <div>
+<>
+            <h1>Pokedex</h1>
+            <h3>This website is a collection of all 151 original pokemon.  Click on any pokemon to get stats/info on it!</h3>
+            <div className="DPCard__container">
                 {Pokemons}
             </div>
+</>
         )
     }
 }
