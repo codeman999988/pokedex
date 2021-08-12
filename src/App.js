@@ -31,8 +31,8 @@ class App extends Component {
       return (
         <Route
         path={`/${index+1}`}
-        render={(props) => (
-      <PokeCard name={pokemon} id={index+1} />
+        render={(routeProps) => (
+      <PokeCard name={pokemon} id={index+1} {...routeProps} />
     )}
   />
           // <Route path={`/${index+1}`}

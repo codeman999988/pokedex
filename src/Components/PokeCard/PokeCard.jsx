@@ -14,12 +14,13 @@ export default class PokeCard extends Component {
         .then(response => this.setState({pokemon: response.data}))
     }
     render() {
-        console.log(this.state.pokemon, "test state");
+        console.log(this.props);
         const types = this.state.pokemon?.types.map(type => {
             return (<h3>{type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1)}</h3>)
         })
         return (
             <div className="PokeCard__container">
+                <a href={`/${(this.props.id > 1 && this.props.id <= 151) ? this.props.id - 1 : 151}`}><h1>❮</h1></a>
                 <div className="stats">
                     <h1 className="PokeCard__name">{this.props.name}</h1>
                     <h1>ID: {this.state.pokemon?.id}</h1>
@@ -47,6 +48,7 @@ export default class PokeCard extends Component {
                 <a href="/" className="back">
                     <h2>← Back</h2></a>
                 </div>
+                <a href={`/${(this.props.id < 151 && this.props.id >= 1) ? this.props.id + 1 : 1}`}><h1>❯</h1></a>
             </div>
         )
     }
